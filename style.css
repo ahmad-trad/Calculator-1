@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all 350ms linear;
+    font-family: consolas;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf1f4;
+    min-height: 100vh;
+}
+
+.dark{
+    background: #282c2f;
+}
+.dark .toggleBtn{
+    background: #edf1f4;
+    box-shadow: 1rem 1rem 1.2rem rgba(0, 0, 0, 0.25),
+    -1rem -1rem 1.2rem rgba(255, 255, 255, 0.1);
+    border: .1rem solid #333;
+}
+
+.calculator{
+    position: relative;
+    width: 22rem;
+    padding: 1rem;
+    box-shadow: .3rem .3rem 1.2rem rgba(0, 0, 0, 0.4),
+                -1rem -1rem 1.2rem #fffb;
+    border-radius: 1rem;
+}
+.dark .calculator{
+    box-shadow: .1rem .1rem 1.3rem rgba(0, 0, 0, 0.25),
+    -.1rem -.1rem 1.5rem rgba(255, 255, 255, 0.4);
+    background: #33393e;
+}
+.calculator .buttons{
+    position: relative;
+    display: grid;
+}
+
+.calculator .buttons .value{
+    grid-column: span 4;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    /* text-align: end; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    color: #5166d6;
+    width: 100%;
+    height: 7rem;
+    /* line-height: 7rem; */
+    box-shadow: inset .4rem .4rem .7rem rgba(0, 0, 0, 0.1),
+                inset -.4rem -.4rem 1.2rem #fff;
+    margin-bottom: .7rem;
+    border-radius: .7rem;
+    padding: .1rem 1.2rem;
+    font-size: 2em;
+    font-weight: 500;
+}
+.dark .calculator .buttons .value{
+    background: #33393e;
+    box-shadow: inset 1rem 1rem 1.2rem rgba(0, 0, 0, 0.25),
+    inset -1rem -1rem 1.2rem rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.calculator .buttons span{
+    cursor: pointer;
+    position: relative;
+    padding: .7rem;
+    box-shadow: .4rem .4rem .7rem rgba(0, 0, 0, 0.1),
+                -.4rem -.4rem 1.2rem #fff;
+    user-select: none;
+    min-width: 2.5rem;
+    border: .1rem solid #edf1f4;
+    border-radius: .5rem;
+    margin: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.2em;
+    box-shadow: .4rem .4rem .7rem rgba(0, 0, 0, 0.1),
+                -.4rem -.4rem .7rem #fff;
+    text-transform: capitalize;
+}
+.dark .calculator .buttons span{
+    box-shadow: .4rem .4rem .7rem rgba(0, 0, 0, 0.25),
+                -.3rem -.3rem .7rem rgba(255, 255, 255, 0.1);
+    color: #eee;
+    border: .1rem solid #333;
+}
+.dark .calculator .buttons span:active{
+    box-shadow: inset .4rem .4rem .7rem rgba(0, 0, 0, 0.25),
+                inset -.3rem -.3rem .7rem rgba(255, 255, 255, 0.1);
+    color: #eee;
+    border: .1rem solid #333;
+}
+
+.calculator .buttons span:active{
+    box-shadow: inset .4rem .4rem .7rem rgba(0, 0, 0, 0.1),
+                inset -.4rem -.4rem .7rem #fff;
+}
+
+.calculator .buttons .equal{
+    grid-column: span 1;
+    background: #3172eb;
+    color: #fff;
+}
+
+.calculator .buttons .plus{
+    grid-row: span 2;
+    background: #7af32a;
+    color: #fff;
+}
+
+.calculator .buttons .clear{
+    background: #eb3819;
+    color: #fff;
+    grid-column: span 2;
+}
+
+.calculator .buttons .clear:active,
+.calculator .buttons .plus:active,
+.calculator .buttons .equal:active{
+    box-shadow: .4rem .4rem .7rem rgba(0, 0, 0, 0.1),
+                -.4rem -.4rem .7rem #fff,
+                inset .4rem .4rem .7rem rgba(0, 0, 0, 0.1);
+}
+
+.dark .calculator .buttons .clear,
+.dark .calculator .buttons .plus,
+.dark .calculator .buttons .equal{
+    color: #eee;
+    font-weight: 600;
+}
+
+.toggleBtn{
+    position: fixed;
+    top: 1.2rem;right: 1.2rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: #555;
+    border: .1rem solid #edf1f4;
+    border-radius: 50%;
+    box-shadow: .4rem .4rem .7rem rgba(0, 0, 0, 0.1),
+                -.4rem -.4rem .7rem #fff;
+    cursor: pointer;
+}
